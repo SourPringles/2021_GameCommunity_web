@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<title>회원가입</title>
+	</head>
+
+	<body>
+		<fieldset style="width: 700px; height: 175px; margin: auto;">
+			<form method=post action='findid.php' style="width: 350px; margin: auto; float: left;">
+				<table>
+					<tr>
+						<th colspan=2><h3>아이디 찾기</h3></th>
+					</tr>
+					<tr>
+						<th>이름</th>
+						<td><input type=text name='Name' required></td>
+					</tr>
+					<tr>
+						<th>E-mail</th>
+						<td><input type=email name='Email' required></td>
+					</tr>
+					<tr>
+						<td colspan=2><input type=submit style="width:300px;" value="아이디 찾기"></td>
+					</tr>
+				</table>
+			</form>
+			<form method=post action='findpw.php' style="width: 350px; margin: auto; float: left;">
+				<table>
+					<tr>
+						<th colspan=2><h3>비밀번호 변경</h3></th>
+					</tr>
+					<tr>
+						<th>이름</th>
+						<td><input type=text name='Name' required></td>
+					</tr>
+					<tr>
+						<th>ID</th>
+						<td><input type=text name='ID' required></td>
+					</tr>
+					<tr>
+						<th>E-mail</th>
+						<td><input type=email name='Email' required></td>
+					</tr>
+					<tr>
+						<td colspan=2><input type=submit style="width: 300px;" value="비밀번호 찾기"></td>
+					</tr>
+				</table>
+			</form>
+		</fieldset>
+	</body>
+</html>
