@@ -16,8 +16,8 @@ $row=mysqli_fetch_array($result);
 
 if($PWI==$row[PW])
 {
-	echo "$No";
 	echo "<h3>게시글이 삭제되었습니다.</h3>";
+	unlink("upload/$row[filelink]");
 	mysqli_query($db, "delete from final_board where No=$No");
 	echo "<a href=../main.php target=frame onclick='window.close()'>홈으로</a>";
 }

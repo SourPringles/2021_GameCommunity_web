@@ -52,8 +52,8 @@ if(!isset($_SESSION['is_login']))
 		</tr>";
 	echo "<tr><th>비밀번호</th><th><input type=password name=pw size=10 required></th></tr>";
 	echo "<tr>
-		<th><a href=resister/resister.php class='resister' target='frame');>회원가입</a></th>
-		<th colspan=2><a href=findidpw/findidpw.html class='resister' target='frame');>아이디/비밀번호 찾기</a></th>
+		<th><a href=# class='resister' onclick=window.open('resister/resister.php','test','width=500,height=400')>회원가입</a></th>
+		<th colspan=2><a href=# class='resister' onclick=window.open('findidpw/findidpw.html','test','width=575,height=275')>아이디/비밀번호 찾기</a></th>
 		</tr>";
 	echo "</table>";
 }
@@ -84,37 +84,37 @@ session_start();
 if(!isset($_SESSION['is_login']))
 {
 	echo "<div class='menulist'>";
-	echo "<a href=# onclick=window.open('notsignedin.html','test','width=800,height=600')>";
+	echo "<a href=# onclick=window.open('notsignedin.html','test','width=400,height=300')>";
 	echo "<b>공지사항</b>";
 	echo "</a>";
 	echo "</div>";
 
 	echo "<div class='menulist'>";
-	echo "<a href=# onclick=window.open('notsignedin.html','test','width=800,height=600')>";
+	echo "<a href=# onclick=window.open('notsignedin.html','test','width=400,height=300')>";
 	echo "<b>League Of Legend</b>";
 	echo "</a>";
 	echo "</div>";
 
 	echo "<div class='menulist'>";
-	echo "<a href=# onclick=window.open('notsignedin.html','test','width=800,height=600')>";
+	echo "<a href=# onclick=window.open('notsignedin.html','test','width=400,height=300')>";
 	echo "<b>BattleGround</b>";
 	echo "</a>";
 	echo "</div>";
 
 	echo "<div class='menulist'>";
-	echo "<a href=# onclick=window.open('notsignedin.html','test','width=800,height=600')>";
+	echo "<a href=# onclick=window.open('notsignedin.html','test','width=400,height=300')>";
 	echo "<b>OverWatch</b>";
 	echo "</a>";
 	echo "</div>";
 
 	echo "<div class='menulist'>";
-	echo "<a href=# onclick=window.open('notsignedin.html','test','width=800,height=600')>";
+	echo "<a href=# onclick=window.open('notsignedin.html','test','width=400,height=300')>";
 	echo "<b>StarCraft</b>";
 	echo "</a>";
 	echo "</div>";
 
 	echo "<div class='menulist'>";
-	echo "<a href=# onclick=window.open('notsignedin.html','test','width=800,height=600')>";
+	echo "<a href=# onclick=window.open('notsignedin.html','test','width=400,height=300')>";
 	echo "<b>QnA</b>";
 	echo "</a>";
 	echo "</div>";
@@ -180,7 +180,7 @@ else
 	echo "</div>";
 	
 	echo "<div class='menulist' onclick=window.open('https://lolchess.gg/')>";
-	echo "<b>롤체지지</b>";
+	echo "<b>LoLCHESS.GG</b>";
 	echo "</div>";
 }
 ?>

@@ -52,7 +52,12 @@ echo "							</select></th>
 	echo "					</th>
 				</re>
 				<tr>
-					<th colspan=2 height=50px>
+					<th height=50px>
+						파일 수정: <input type=checkbox name=changefile value='Y'>
+					</th>
+				</tr>
+				<tr>
+					<th height=50px>
 						<input type='file' name='userfile' class='file'>
 
 						<input type='hidden' name='MAX_FILE_SIZE' value='1000000'>

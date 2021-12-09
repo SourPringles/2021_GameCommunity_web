@@ -11,7 +11,7 @@ if($is_edit=="edit")
 	$row=mysqli_fetch_array($result);
 	$PW=$row[PW];
 	$FN=$row[filelink];
-	
+
 	if($_POST[pw]==$PW)
 	{
 		$Sub=$_POST[boardsub];
@@ -23,15 +23,17 @@ if($is_edit=="edit")
 		mysqli_query($db, "update final_board set Sub='$Sub' where No=$No");
 		mysqli_query($db, "update final_board set Title='$Title' where No=$No");
 		mysqli_query($db, "update final_board set Msg='$Msg' where No=$No");
-		
+			
 		$tempfile=$_FILES['userfile']['tmp_name'];
 		$realfile=$_FILES['userfile']['name'];
-
-		$fileDir="upload/".$realfile;
-		move_uploaded_file($tempfile, $fileDir);
-		mysqli_query($db, "update final_board set filelink='$realfile' where No=$No");
 		
-
+		if(isset($_POST[changefile]))
+		{
+			unlink("upload/$row[filelink]");
+			$fileDir="upload/".$realfile;
+			move_uploaded_file($tempfile, $fileDir);
+			mysqli_query($db, "update final_board set filelink='$realfile' where No=$No");
+		}
 		echo "수정 완료";
 	}
 	else echo "비밀번호가 다릅니다";
